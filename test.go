@@ -249,8 +249,8 @@ type final_display struct {
 type final_display_arr []final_display
 
 func main() {
-	config := oauth1.NewConfig("uT2M1ViQ9L7AHT6W6cUHmmqMD", "EpFhycHz0skMTvDIKi3NdbEehGIlyuMkXgNt0JvXC9uAQJ2Osf")
-	token := oauth1.NewToken("2363857862-7xotz38i2rAviViIiARS6sB524WJfwTnoTsz7AJ", "eng1Tq5SUtO4mafYW6IqItYiw4fABBHFMaBE5LmRAtbHq")
+	config := oauth1.NewConfig("", "")
+	token := oauth1.NewToken("", "")
 	httpClient := config.Client(oauth1.NoContext, token)
 
 	// Twitter client
@@ -293,7 +293,7 @@ func main() {
 		if err != nil {
 			// handle err
 		}
-		req.SetBasicAuth("ca5b2620-6a94-43c7-bc3d-538571d60953", "hZQ25FBDlFVy")
+		req.SetBasicAuth("", "")
 		req.Header.Set("Content-Type", "application/json")
 
 		resp, err := http.DefaultClient.Do(req)
